@@ -121,7 +121,7 @@ export const enviar = async (req, res = response) => {
             Stock.findAll({ where: { informado: 'N' } })
         ])
 
-        // option = 1 identifica que a las ventas al valor de totalPacksAmount se le coloca un '-' al inicio de
+        // option = 1 identifica que a las ventas al valor de totalPacksAmount se le coloca un '_' al inicio de
         // para que luego coincida con el patron de expresion regular y poder modificar el json
 
         const customer = formatCustomers(customersSinFormato);
@@ -130,6 +130,12 @@ export const enviar = async (req, res = response) => {
 
         // Genero el JSON segun documentacion de API
         let data = { customer, sales, stock };
+
+        // Genero el archivo JSON jsonData.json
+        // let data_json = JSON.stringify(data);
+        // const regex = /"_(-|)([0-9]+(?:\.[0-9]+)?)"/g
+        // data_json = data_json.replace(regex, '$1$2')
+        // fs.writeFileSync('jsonData.json', data_json );
 
         // Envio los datos de la secuencia y verifico la respuesta
         const response = await fetchDataPost(data, NumSecuenciaP);
@@ -163,7 +169,6 @@ export const enviar = async (req, res = response) => {
         }
 
         res.render('index', { ...message, displayName });
-
 
     } catch (error) {
         console.log(error);

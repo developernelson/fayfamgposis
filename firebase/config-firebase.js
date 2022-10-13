@@ -7,12 +7,12 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 // devfullstacknelson@gmail.com
 const firebaseConfig = {
-  apiKey: "AIzaSyD-h98vSNNWJN876rG6w8fPn9ulTnA-W9Y",
-  authDomain: "posis-maxico.firebaseapp.com",
-  projectId: "posis-maxico",
-  storageBucket: "gs://posis-maxico.appspot.com",
-  messagingSenderId: "304490417100",
-  appId: "1:304490417100:web:1f5be9375df6880ecfab69"
+  apiKey: "AIzaSyB940IfDKkV_ehxbudiCAVdMy3B6IiIG3Y",
+  authDomain: "posis-fayfa-suc1.firebaseapp.com",
+  projectId: "posis-fayfa-suc1",
+  storageBucket: "gs://posis-fayfa-suc1.appspot.com",
+  messagingSenderId: "907217725116",
+  appId: "1:907217725116:web:c1fc6cb2037dd4954152b9"
 };
 
 // Initialize Firebase
