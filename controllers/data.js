@@ -131,6 +131,13 @@ export const enviar = async (req, res = response) => {
         // Genero el JSON segun documentacion de API
         let data = { customer, sales, stock };
 
+
+         // Genero el archivo JSON jsonData.json
+        // let data_json = JSON.stringify(data);
+        // const regex = /"_(-|)([0-9]+(?:\.[0-9]+)?)"/g
+        // data_json = data_json.replace(regex, '$1$2')
+        // fs.writeFileSync('jsonData.json', data_json );
+
         // Envio los datos de la secuencia y verifico la respuesta
         const response = await fetchDataPost(data, NumSecuenciaP);
         const result = await response.json();

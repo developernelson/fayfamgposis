@@ -26,8 +26,4 @@ export const fetchDataPost = (data, numeroSecuencia) => {
 }  
 
 
-    // Genero el archivo JSON jsonData.json
-        // let data_json = JSON.stringify(data);
-        // const regex = /"_(-|)([0-9]+(?:\.[0-9]+)?)"/g
-        // data_json = data_json.replace(regex, '$1$2')
-        // fs.writeFileSync('jsonData.json', data_json );
+   
