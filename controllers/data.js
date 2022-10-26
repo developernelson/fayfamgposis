@@ -132,7 +132,7 @@ export const enviar = async (req, res = response) => {
         let data = { customer, sales, stock };
 
 
-         // Genero el archivo JSON jsonData.json
+        // Genero el archivo JSON jsonData.json
         // let data_json = JSON.stringify(data);
         // const regex = /"_(-|)([0-9]+(?:\.[0-9]+)?)"/g
         // data_json = data_json.replace(regex, '$1$2')
@@ -170,6 +170,7 @@ export const enviar = async (req, res = response) => {
         }
 
         res.render('index', { ...message, displayName });
+        
 
     } catch (error) {
         console.log(error);
