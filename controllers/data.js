@@ -130,11 +130,12 @@ export const enviar = async (req, res = response) => {
 
         // Genero el JSON segun documentacion de API
         let data = { customer, sales, stock };
-
+       
         // Genero el archivo JSON jsonData.json
-        // let data_json = JSON.stringify(data);
-        // const regex = /"_(-|)([0-9]+(?:\.[0-9]+)?)"/g
-        // data_json = data_json.replace(regex, '$1$2')
+        let data_json = JSON.stringify(data);
+        const regex = /"_(-|)([0-9]+(?:\.[0-9]+)?)"/g
+        data_json = data_json.replace(regex, '$1$2')
+        fileUpload(data_json, NumSecuenciaP.toString());
         // fs.writeFileSync('jsonData.json', data_json );
 
         // Envio los datos de la secuencia y verifico la respuesta
